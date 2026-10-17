@@ -102,9 +102,6 @@ public class Auto extends OpMode {
     private Path park(){
         return line(scorePose, parkPose).linear(scorePose, parkPose);
     }
-//    private Path park() {
-//        return curve(startPose, controlPose, park).linear(startPose, park);
-//    }
     private Command autoRoutine() {
         return sequential(
                 follow(follower, startToScore()),   // (24,24) → (48,48), slower
